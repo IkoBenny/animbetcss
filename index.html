@@ -19,7 +19,6 @@
 	position: absolute;
 	width: 100%;
 	opacity: 1;
-	animation: fade-top 2s;
 }
 
 .image-three {
@@ -57,10 +56,22 @@
    </head>
    <body>
    <div class="container">
-	<img class="image-three"  alt ="some" src="Untitled-10.png" >
-	<img class="image"  alt ="some" src="Untitled-1.png" >
-	<img class="image-two"  alt ="some" src="Untitled-11.png" >
+	<img class="image-three" id="black" alt ="some" src="Untitled-10.png" >
+	<img class="image" id="green" alt ="some" src="Untitled-1.png" >
+	<img class="image-two" onclick = "clickfunction()" id="grey" alt ="some" src="Untitled-11.png" >
    </div>
 
+<script>
+
+	var blkimg = document.getElementById("black");
+	var grnimg = document.getElementById("green");
+	var gryimg = document.getElementById("grey");
+	
+function clickfunction(){
+	 gryimg.style.animation = "fade-top 2s";
+	 gryimg.style.opacity = "0"
+}
+
+</script>
    </body>
 </html>
