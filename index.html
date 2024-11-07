@@ -1,0 +1,66 @@
+<html>
+   <head>
+    <style>
+.container {
+	position: relative;
+	width: 500px;
+	max-width: 100%;
+	height: 400px;
+}
+
+.image {
+	position: absolute;
+	width: 100%;
+	opacity: 1;
+	animation: change-img-anim .15s;
+}
+
+.image-two {
+	position: absolute;
+	width: 100%;
+	opacity: 1;
+	animation: fade-top 2s;
+}
+
+.image-three {
+	position: absolute;
+	width: 100%;
+	opacity: 1;
+	animation: fade-in 1s;
+}
+
+.image:nth-of-type(2) {
+	animation-delay: 1s;
+	animation-iteration-count: 10;
+}
+
+.image:nth-of-type(3) {
+	animation-delay: 1s;
+}
+
+@keyframes change-img-anim {
+	0%{ opacity: 1;}
+	50%{opacity: 0;}
+	100%{ opacity: 1;}
+}
+
+@keyframes fade-top {
+	0%{ opacity: 1;}
+	100%{ opacity: 0;}
+}
+
+@keyframes fade-in {
+	0%{ opacity: 1;}
+	100%{ opacity: 0;}
+}
+    </style>
+   </head>
+   <body>
+   <div class="container">
+	<img class="image-three"  alt ="some" src="Untitled-10.png" >
+	<img class="image"  alt ="some" src="Untitled-1.png" >
+	<img class="image-two"  alt ="some" src="Untitled-11.png" >
+   </div>
+
+   </body>
+</html>
