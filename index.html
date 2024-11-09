@@ -49,8 +49,8 @@
 }
 
 @keyframes fade-in {
-	0%{ opacity: 1;}
-	100%{ opacity: 0;}
+	0%{ opacity: 0;}
+	100%{ opacity: 1;}
 }
     </style>
    </head>
@@ -67,9 +67,27 @@
 	var grnimg = document.getElementById("green");
 	var gryimg = document.getElementById("grey");
 	
+	var times = 0;
+	
 function clickfunction(){
-	 gryimg.style.animation = "fade-top 2s";
+	
+
+	
+	if (times === 0 || times % 2 === 0) {
+		console.log("click")
+		times++;
+			 gryimg.style.animation = "fade-top 2s";
 	 gryimg.style.opacity = "0"
+	}
+	
+	else {
+		console.log("unclick")
+		times++;
+	 gryimg.style.animation = "fade-in 2s";
+	 gryimg.style.opacity = "1"
+	}
+	
+	
 }
 
 </script>
